@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Developer Support AI Assistant</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="chat-container">
+    <header class="header">
+      <h2>🛠️ Dev Support AI Assistant</h2>
+      <p>Ask technical questions grounded in documentation with source citations.</p>
+    </header>
+
+    <div id="responseContainer" class="response-container hidden">
+      <div id="statusMessage" class="status-message" role="status" aria-live="polite">
+        <span id="statusSpinner" class="spinner" aria-hidden="true"></span>
+        <span id="statusText">Preparing your answer...</span>
+      </div>
+      <div class="card">
+        <h3>Answer</h3>
+        <div id="answerText" class="answer-text"></div>
+      </div>
+
+      <div class="card">
+        <h3>Sources Cited</h3>
+        <ul id="citationsList" class="citations-list"></ul>
+      </div>
+    </div>
+
+    <div class="input-section">
+      <textarea id="queryInput" placeholder="e.g., How do I authenticate requests and what is the rate limit?" rows="3"></textarea>
+      <button id="submitBtn" onclick="submitQuery()">Ask Assistant</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
